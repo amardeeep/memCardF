@@ -1,6 +1,6 @@
 import Card from './card.jsx'
 import Score from './score.jsx'
-import '/home/deetsy4455/repos/memCardF/src/styles/App.css'
+import './App.css'
 
 function App() {
   
