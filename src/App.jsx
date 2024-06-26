@@ -6,22 +6,17 @@ import { useState,useEffect } from 'react'
 function App() {
   const [dataUrl,setDataUrl]=useState([]);
   useEffect(()=>{
-    console.log("hello");
-    ()=>{
       console.log("KK")
       let data=[];
-      fetch('https://api.giphy.com/v1/gifs/search?api_key=D1l9PZ7kq8sawELXpNiiGdU13DjQjC9F&q=cats&limit=10').then(
+      fetch('https://api.giphy.com/v1/gifs/search?api_key=D1l9PZ7kq8sawELXpNiiGdU13DjQjC9F&q=cats&limit=10',{mode:'cors'}).then(
         function(response){
-          console.log(response.json())
           return response.json()
         }).then(function(response){
           for(let entry of response.data){
-            data.push({key:entry.id,url:entry.url})
+            data.push({key:entry.id,url:entry.images.original.url})
           }
-          console.log(data)
           setDataUrl(data)
         })
-      }
     },[])
   return(
     <div className='app'>
@@ -30,7 +25,7 @@ function App() {
       <div className="cards">
         {dataUrl.map(entry=>{
           return (
-            <Card key={entry.id} data={entry.url}></Card>
+            <Card key={entry.key} data={entry.url}></Card>
           )
         })}
       </div>

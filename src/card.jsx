@@ -1,7 +1,7 @@
 function Card({data}){
     return(
         <div className="card">
-            <img src={data.url} alt="" />
+            <img src={data} alt="" />
         </div>
     )
 }
