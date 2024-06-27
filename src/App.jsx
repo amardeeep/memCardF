@@ -30,7 +30,8 @@ function App() {
     }
   return(
     <div className='app'>
-      <h1>Test Your Memory(Lebron Edition)</h1>
+      <h1>Test Your Memory (Lebron Edition)</h1>
+      <h3>Click Any image but not more than once. Good Luck !</h3>
       <div className="cards">
         {dataUrl.map(entry=>{
           return (
