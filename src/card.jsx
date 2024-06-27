@@ -1,7 +1,8 @@
-function Card({data}){
+function Card(props){
+    
     return(
         <div className="card">
-            <img src={data} alt="" />
+            <img src={props.data} alt="Placeholder Image" onClick={props.onClick} />
         </div>
     )
 }

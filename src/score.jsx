@@ -1,8 +1,8 @@
-function Score(){
+function Score(props){
     return(
         <div className="score">
             <div className="highestScore"></div>
-            <div className="currentScore"></div>
+            <div className="currentScore">{props.score}</div>
         </div>
     )
 }
