@@ -5,7 +5,9 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-image: url(tj-dragotta-Gl0jBJJTDWs-unsplash.jpg);
+  background-size: cover;
+  background-repeat:no-repeat ;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

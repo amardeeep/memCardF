@@ -9,7 +9,7 @@ function App() {
   const [reset,setreset]=useState(0);
   useEffect(()=>{
       let data=[];
-      fetch('https://api.giphy.com/v1/gifs/search?api_key=D1l9PZ7kq8sawELXpNiiGdU13DjQjC9F&q=dogs&limit=10',{mode:'cors'}).then(
+      fetch('https://api.giphy.com/v1/gifs/search?api_key=D1l9PZ7kq8sawELXpNiiGdU13DjQjC9F&q=lebron&limit=10',{mode:'cors'}).then(
         function(response){
           return response.json()
         }).then(function(response){
@@ -30,7 +30,7 @@ function App() {
     }
   return(
     <div className='app'>
-      <h1>Test Your Memory</h1>
+      <h1>Test Your Memory(Lebron Edition)</h1>
       <div className="cards">
         {dataUrl.map(entry=>{
           return (
