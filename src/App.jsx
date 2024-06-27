@@ -37,7 +37,7 @@ function App() {
             <Card key={entry.key} data={entry.url} onClick={()=>{
               if(!entry.isHit){
                 setScore(score+1);
-                if(maxScore<=score){maxScore=score}
+                if(maxScore<=score){maxScore=score+1}
                 entry.isHit=true
                 shuffleArray(dataUrl)
               }
@@ -51,8 +51,7 @@ function App() {
         })}
         
       </div>
-      <Score maxScore={maxScore}></Score>
-      <Score score={score}></Score>
+      <Score maxScore={maxScore} score={score}></Score>
     </div>
   )
 }
